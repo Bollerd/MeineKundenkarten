@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F370C9CF2B57C57400EC9A9E /* TipKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F370C9CE2B57C57400EC9A9E /* TipKit.swift */; };
+		F370C9D82B59AE8000EC9A9E /* SwiftHelperExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = F370C9D72B59AE8000EC9A9E /* SwiftHelperExtensions */; };
+		F370C9DE2B5A583700EC9A9E /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = F370C9DD2B5A583700EC9A9E /* ZIPFoundation */; };
+		F3912EAD2B7E641D00FD191B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3912EAC2B7E641D00FD191B /* SearchBar.swift */; };
+		F3BC40072B5D83C200F0AFED /* SwiftHelperUIKitExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = F3BC40062B5D83C200F0AFED /* SwiftHelperUIKitExtensions */; };
+		F3CF062F2B34A2E800559926 /* Meine_KundenkartenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF062E2B34A2E800559926 /* Meine_KundenkartenApp.swift */; };
+		F3CF06312B34A2E800559926 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF06302B34A2E800559926 /* ContentView.swift */; };
+		F3CF06332B34A2E900559926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CF06322B34A2E900559926 /* Assets.xcassets */; };
+		F3CF06362B34A2E900559926 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CF06352B34A2E900559926 /* Preview Assets.xcassets */; };
+		F3CF06432B44851800559926 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF06422B44851800559926 /* AppData.swift */; };
+		F3CF06452B44853700559926 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF06442B44853700559926 /* Model.swift */; };
+		F3CF06472B44864100559926 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF06462B44864100559926 /* Background.swift */; };
+		F3CF06492B4486F600559926 /* LaunchScreenStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF06482B4486F600559926 /* LaunchScreenStateManager.swift */; };
+		F3CF064B2B44871E00559926 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF064A2B44871E00559926 /* LaunchScreenView.swift */; };
+		F3CF064E2B44992300559926 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF064D2B44992300559926 /* SheetView.swift */; };
+		F3CF06502B449A0700559926 /* SubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF064F2B449A0700559926 /* SubView.swift */; };
+		F3CF06532B449A4C00559926 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = F3CF06522B449A4C00559926 /* CodeScanner */; };
+		F3CF06552B45F51400559926 /* bg_script.js in Resources */ = {isa = PBXBuildFile; fileRef = F3CF06542B45F51400559926 /* bg_script.js */; };
+		F3CF06572B45F56700559926 /* JsBarcode.js in Resources */ = {isa = PBXBuildFile; fileRef = F3CF06562B45F56700559926 /* JsBarcode.js */; };
+		F3CF065B2B470D0800559926 /* AppInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CF065A2B470D0800559926 /* AppInfoView.swift */; };
+		F3E383272B55A1F300E5AB5B /* LocationHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E383262B55A1F300E5AB5B /* LocationHandling.swift */; };
+		F3E383292B56AD4000E5AB5B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E383282B56AD4000E5AB5B /* Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F370C9CE2B57C57400EC9A9E /* TipKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipKit.swift; sourceTree = "<group>"; };
+		F3912EAC2B7E641D00FD191B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		F3CF062B2B34A2E800559926 /* Meine Kundenkarten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meine Kundenkarten.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3CF062E2B34A2E800559926 /* Meine_KundenkartenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meine_KundenkartenApp.swift; sourceTree = "<group>"; };
+		F3CF06302B34A2E800559926 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F3CF06322B34A2E900559926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3CF06352B34A2E900559926 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F3CF06422B44851800559926 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		F3CF06442B44853700559926 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F3CF06462B44864100559926 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		F3CF06482B4486F600559926 /* LaunchScreenStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenStateManager.swift; sourceTree = "<group>"; };
+		F3CF064A2B44871E00559926 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		F3CF064D2B44992300559926 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		F3CF064F2B449A0700559926 /* SubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubView.swift; sourceTree = "<group>"; };
+		F3CF06542B45F51400559926 /* bg_script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = bg_script.js; sourceTree = "<group>"; };
+		F3CF06562B45F56700559926 /* JsBarcode.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JsBarcode.js; sourceTree = "<group>"; };
+		F3CF06592B470B3B00559926 /* Meine-Kundenkarten-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Meine-Kundenkarten-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F3CF065A2B470D0800559926 /* AppInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoView.swift; sourceTree = "<group>"; };
+		F3E383242B555A4B00E5AB5B /* Meine Kundenkarten.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Meine Kundenkarten.entitlements"; sourceTree = "<group>"; };
+		F3E383262B55A1F300E5AB5B /* LocationHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandling.swift; sourceTree = "<group>"; };
+		F3E383282B56AD4000E5AB5B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F3E51BFB2CD9322300F8F85D /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3CF06282B34A2E800559926 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F370C9D82B59AE8000EC9A9E /* SwiftHelperExtensions in Frameworks */,
+				F3BC40072B5D83C200F0AFED /* SwiftHelperUIKitExtensions in Frameworks */,
+				F3CF06532B449A4C00559926 /* CodeScanner in Frameworks */,
+				F370C9DE2B5A583700EC9A9E /* ZIPFoundation in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3CF06222B34A2E800559926 = {
+			isa = PBXGroup;
+			children = (
+				F3CF062D2B34A2E800559926 /* Meine Kundenkarten */,
+				F3CF062C2B34A2E800559926 /* Products */,
+				F3CF06592B470B3B00559926 /* Meine-Kundenkarten-Info.plist */,
+				F3E51BFB2CD9322300F8F85D /* README.MD */,
+			);
+			sourceTree = "<group>";
+		};
+		F3CF062C2B34A2E800559926 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF062B2B34A2E800559926 /* Meine Kundenkarten.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3CF062D2B34A2E800559926 /* Meine Kundenkarten */ = {
+			isa = PBXGroup;
+			children = (
+				F3E383242B555A4B00E5AB5B /* Meine Kundenkarten.entitlements */,
+				F3CF06582B45F57400559926 /* Resources */,
+				F3CF064C2B44991600559926 /* Views */,
+				F3CF062E2B34A2E800559926 /* Meine_KundenkartenApp.swift */,
+				F3E383252B55A18900E5AB5B /* Model */,
+				F3CF06322B34A2E900559926 /* Assets.xcassets */,
+				F3CF06342B34A2E900559926 /* Preview Content */,
+			);
+			path = "Meine Kundenkarten";
+			sourceTree = "<group>";
+		};
+		F3CF06342B34A2E900559926 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF06352B34A2E900559926 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F3CF064C2B44991600559926 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF064D2B44992300559926 /* SheetView.swift */,
+				F3CF06302B34A2E800559926 /* ContentView.swift */,
+				F3CF064A2B44871E00559926 /* LaunchScreenView.swift */,
+				F3CF064F2B449A0700559926 /* SubView.swift */,
+				F3CF065A2B470D0800559926 /* AppInfoView.swift */,
+				F370C9CE2B57C57400EC9A9E /* TipKit.swift */,
+				F3912EAC2B7E641D00FD191B /* SearchBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F3CF06582B45F57400559926 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF06542B45F51400559926 /* bg_script.js */,
+				F3CF06562B45F56700559926 /* JsBarcode.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F3E383252B55A18900E5AB5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3CF06422B44851800559926 /* AppData.swift */,
+				F3CF06442B44853700559926 /* Model.swift */,
+				F3CF06462B44864100559926 /* Background.swift */,
+				F3CF06482B4486F600559926 /* LaunchScreenStateManager.swift */,
+				F3E383262B55A1F300E5AB5B /* LocationHandling.swift */,
+				F3E383282B56AD4000E5AB5B /* Extensions.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3CF062A2B34A2E800559926 /* Meine Kundenkarten */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3CF06392B34A2E900559926 /* Build configuration list for PBXNativeTarget "Meine Kundenkarten" */;
+			buildPhases = (
+				F3CF06272B34A2E800559926 /* Sources */,
+				F3CF06282B34A2E800559926 /* Frameworks */,
+				F3CF06292B34A2E800559926 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Meine Kundenkarten";
+			packageProductDependencies = (
+				F3CF06522B449A4C00559926 /* CodeScanner */,
+				F370C9D72B59AE8000EC9A9E /* SwiftHelperExtensions */,
+				F370C9DD2B5A583700EC9A9E /* ZIPFoundation */,
+				F3BC40062B5D83C200F0AFED /* SwiftHelperUIKitExtensions */,
+			);
+			productName = "Meine Kundenkarten";
+			productReference = F3CF062B2B34A2E800559926 /* Meine Kundenkarten.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3CF06232B34A2E800559926 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					F3CF062A2B34A2E800559926 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = F3CF06262B34A2E800559926 /* Build configuration list for PBXProject "Meine Kundenkarten" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = de;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				de,
+			);
+			mainGroup = F3CF06222B34A2E800559926;
+			packageReferences = (
+				F3CF06512B449A4C00559926 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				F370C9D62B59AE8000EC9A9E /* XCRemoteSwiftPackageReference "SwiftHelper" */,
+				F370C9DC2B5A583700EC9A9E /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+				F3BC40052B5D83C200F0AFED /* XCRemoteSwiftPackageReference "SwiftHelperUIKit" */,
+			);
+			productRefGroup = F3CF062C2B34A2E800559926 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3CF062A2B34A2E800559926 /* Meine Kundenkarten */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3CF06292B34A2E800559926 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3CF06572B45F56700559926 /* JsBarcode.js in Resources */,
+				F3CF06552B45F51400559926 /* bg_script.js in Resources */,
+				F3CF06362B34A2E900559926 /* Preview Assets.xcassets in Resources */,
+				F3CF06332B34A2E900559926 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3CF06272B34A2E800559926 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3CF06312B34A2E800559926 /* ContentView.swift in Sources */,
+				F3CF065B2B470D0800559926 /* AppInfoView.swift in Sources */,
+				F3CF062F2B34A2E800559926 /* Meine_KundenkartenApp.swift in Sources */,
+				F3CF064B2B44871E00559926 /* LaunchScreenView.swift in Sources */,
+				F3CF06492B4486F600559926 /* LaunchScreenStateManager.swift in Sources */,
+				F3CF06432B44851800559926 /* AppData.swift in Sources */,
+				F3CF06452B44853700559926 /* Model.swift in Sources */,
+				F3912EAD2B7E641D00FD191B /* SearchBar.swift in Sources */,
+				F3E383292B56AD4000E5AB5B /* Extensions.swift in Sources */,
+				F3CF06502B449A0700559926 /* SubView.swift in Sources */,
+				F3CF064E2B44992300559926 /* SheetView.swift in Sources */,
+				F3CF06472B44864100559926 /* Background.swift in Sources */,
+				F370C9CF2B57C57400EC9A9E /* TipKit.swift in Sources */,
+				F3E383272B55A1F300E5AB5B /* LocationHandling.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F3CF06372B34A2E900559926 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F3CF06382B34A2E900559926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3CF063A2B34A2E900559926 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Meine Kundenkarten/Meine Kundenkarten.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 16;
+				DEVELOPMENT_ASSET_PATHS = "\"Meine Kundenkarten/Preview Content\"";
+				DEVELOPMENT_TEAM = Z6946K9NFZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Meine-Kundenkarten-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Meine Kundenkarten";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Benötigt um deine Kundenkarte zu scannen und digital in der App zu speichern";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Benötigt um den Zugriff auf deine Kundenkarten biometrisch zu entsperren";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Benötigt um für eine Kundenkarte die Position zu speichern, wo du sie verwenden möchtest";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.bollernet.Meine-Kundenkarten";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3CF063B2B34A2E900559926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Meine Kundenkarten/Meine Kundenkarten.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 16;
+				DEVELOPMENT_ASSET_PATHS = "\"Meine Kundenkarten/Preview Content\"";
+				DEVELOPMENT_TEAM = Z6946K9NFZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Meine-Kundenkarten-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Meine Kundenkarten";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Benötigt um deine Kundenkarte zu scannen und digital in der App zu speichern";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Benötigt um den Zugriff auf deine Kundenkarten biometrisch zu entsperren";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Benötigt um für eine Kundenkarte die Position zu speichern, wo du sie verwenden möchtest";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.bollernet.Meine-Kundenkarten";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3CF06262B34A2E800559926 /* Build configuration list for PBXProject "Meine Kundenkarten" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3CF06372B34A2E900559926 /* Debug */,
+				F3CF06382B34A2E900559926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3CF06392B34A2E900559926 /* Build configuration list for PBXNativeTarget "Meine Kundenkarten" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3CF063A2B34A2E900559926 /* Debug */,
+				F3CF063B2B34A2E900559926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F370C9D62B59AE8000EC9A9E /* XCRemoteSwiftPackageReference "SwiftHelper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Bollerd/SwiftHelper.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		F370C9DC2B5A583700EC9A9E /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.17;
+			};
+		};
+		F3BC40052B5D83C200F0AFED /* XCRemoteSwiftPackageReference "SwiftHelperUIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Bollerd/SwiftHelperUIKit.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		F3CF06512B449A4C00559926 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F370C9D72B59AE8000EC9A9E /* SwiftHelperExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F370C9D62B59AE8000EC9A9E /* XCRemoteSwiftPackageReference "SwiftHelper" */;
+			productName = SwiftHelperExtensions;
+		};
+		F370C9DD2B5A583700EC9A9E /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F370C9DC2B5A583700EC9A9E /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+		F3BC40062B5D83C200F0AFED /* SwiftHelperUIKitExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3BC40052B5D83C200F0AFED /* XCRemoteSwiftPackageReference "SwiftHelperUIKit" */;
+			productName = SwiftHelperUIKitExtensions;
+		};
+		F3CF06522B449A4C00559926 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3CF06512B449A4C00559926 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F3CF06232B34A2E800559926 /* Project object */;
+}

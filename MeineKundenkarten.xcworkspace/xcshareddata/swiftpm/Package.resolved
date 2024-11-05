@@ -1,0 +1,51 @@
+{
+  "originHash" : "8a7fbe86d43b7a834f2d86b2d5a370ccb01315ff4b1664110d491203aad716f7",
+  "pins" : [
+    {
+      "identity" : "codescanner",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/twostraws/CodeScanner",
+      "state" : {
+        "revision" : "34da57fb63b47add20de8a85da58191523ccce57",
+        "version" : "2.5.0"
+      }
+    },
+    {
+      "identity" : "files",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/Files.git",
+      "state" : {
+        "revision" : "d273b5b7025d386feef79ef6bad7de762e106eaf",
+        "version" : "4.2.0"
+      }
+    },
+    {
+      "identity" : "swifthelper",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Bollerd/SwiftHelper.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "cedd6ff3d9968e4f45209e62ff1ede153f7e7df1"
+      }
+    },
+    {
+      "identity" : "swifthelperuikit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Bollerd/SwiftHelperUIKit.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c620e756f0e2d8dfbc947fa420dde8377c3c9be9"
+      }
+    },
+    {
+      "identity" : "zipfoundation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/weichsel/ZIPFoundation.git",
+      "state" : {
+        "revision" : "02b6abe5f6eef7e3cbd5f247c5cc24e246efcfe0",
+        "version" : "0.9.19"
+      }
+    }
+  ],
+  "version" : 3
+}
