@@ -71,7 +71,7 @@ struct ContentView: View {
             }.onChange(of: scenePhase) { newPhase in
                 if newPhase == .active {
                     print("Active")
-                    if model.autoCheckIn == true {
+                    if model.autoCheckIn == true && !( model.isUnlocked == false && model.protectApp == true ) {
                         self.location = self.model.getCurrentLocation()
                         self.model.selectItemForAutoCheckin()
                     }
@@ -138,6 +138,11 @@ struct ContentView: View {
                 Text("\(model.unlockError)")
                 Button("Biometrisch entsperren") {
                     model.authenticateWithFaceID()
+                    
+                    if model.isUnlocked == true {
+                        self.location = self.model.getCurrentLocation()
+                        self.model.selectItemForAutoCheckin()
+                    }
                 }.buttonStyle(.borderedProminent)
             }
         )
@@ -189,13 +194,15 @@ struct ContentView: View {
     /// - Returns: some toolbar content
     private func primaryToolbarItems() -> some ToolbarContent {
         return ToolbarItemGroup(placement: .primaryAction) {
-            Button("Neu") {
-                self.model.addNewObject()
+            if !( model.isUnlocked == false && model.protectApp == true ) {
+                Button("Neu") {
+                    self.model.addNewObject()
+                }
+                Button("Check In") {
+                    self.location = self.model.getCurrentLocation()
+                    self.model.selectItemForAutoCheckin()
+                }
             }
-            Button("Check In") {
-                self.location = self.model.getCurrentLocation()
-            }
-            
         }
     }
     
@@ -204,26 +211,29 @@ struct ContentView: View {
     private func secondaryToolbarItems() -> some ToolbarContent {
         return ToolbarItemGroup(placement: .secondaryAction) {
             if (model.searchText == "") {
-                Button("Speichern") {
-                    self.model.encodeData()
+                if !( model.isUnlocked == false && model.protectApp == true ) {
+                    Button("Speichern") {
+                        self.model.encodeData()
+                    }
+                    Toggle(isOn: $model.autoCheckIn, label: {
+                        Text("Auto Check In")
+                    })
                 }
-                Toggle(isOn: $model.autoCheckIn, label: {
-                    Text("Auto Check In")
-                })
-                
                 if !( model.isUnlocked == false && model.protectApp == true ) {
                     Toggle(isOn: $model.protectApp, label: {
                         Text("Biometrisch schützen")
                     })
                 }
-                if (model.showDataExport == true) {
-                    Button("Export/Import") {
-                        self.model.setEncodedData()
-                        self.showingSheet.toggle()
-                        /*
-                         let pasteboard = UIPasteboard.general
-                         pasteboard.string = self.model.encodedData
-                         */
+                if !( model.isUnlocked == false && model.protectApp == true ) {
+                    if (model.showDataExport == true) {
+                        Button("Export/Import") {
+                            self.model.setEncodedData()
+                            self.showingSheet.toggle()
+                            /*
+                             let pasteboard = UIPasteboard.general
+                             pasteboard.string = self.model.encodedData
+                             */
+                        }
                     }
                 }
                 Button("App Information") {

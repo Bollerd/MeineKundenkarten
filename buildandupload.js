@@ -76,6 +76,10 @@ function checkBuildFolder() {
 }
 
 async function executeShell(command) {
+  console.log("Will run command:");
+  console.log("--------------------");
+  console.log(command);
+  console.log("--------------------");
   return new Promise(function (resolve, reject) {
     const child = exec(command, (error, stdout, stderr) => {
       if (error) {
