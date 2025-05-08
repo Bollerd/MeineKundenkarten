@@ -15,7 +15,7 @@ struct ContentView: View {
     @Environment(\.scenePhase) var scenePhase
     @EnvironmentObject private var launchScreenState: LaunchScreenStateManager
     @State private var location: ShowedAtLocation = ShowedAtLocation(latitude: 0.0, longitude: 0.0, name: "")
-    
+    @State var importingFile = false
     var body: some View {
         VStack {
             if #available(iOS 17.0, *) {
@@ -66,7 +66,6 @@ struct ContentView: View {
                             Text("Kein Listeneintrag gewählt").font(.largeTitle)
                         }
                     }.navigationTitle("Keine Auswahl").navigationBarTitleDisplayMode(.inline)
-                   
                 }
             }.onChange(of: scenePhase) { newPhase in
                 if newPhase == .active {
@@ -97,6 +96,7 @@ struct ContentView: View {
                 }
             }.searchable(text: $model.searchText)
             Text("Made with ❤️ in SwiftUI by Dirk Boller v\(VERSION) (\(BUILD))").frame(height: 15).font(.footnote)
+          //  Text("\(model.watchModel.messageFromPhone)").font(.footnote)
         }
     }
     
@@ -228,17 +228,58 @@ struct ContentView: View {
                     if (model.showDataExport == true) {
                         Button("Export/Import") {
                             self.model.setEncodedData()
+                            self.model.importFromFile = false
                             self.showingSheet.toggle()
                             /*
                              let pasteboard = UIPasteboard.general
                              pasteboard.string = self.model.encodedData
                              */
                         }
+                        Button(action: {
+                            importingFile.toggle()
+                        }) {
+                            Text("Datei einlesen")
+                        }.fileImporter(
+                            isPresented: $importingFile,
+                            allowedContentTypes: [.plainText,.json]
+                        ) { result in
+                            switch result {
+                            case .success(let file):
+                                print(file.absoluteString)
+                                
+                                // Zugriff auf Security-Scoped Resource
+                                guard file.startAccessingSecurityScopedResource() else {
+                                   return
+                                }
+                                
+                                defer { file.stopAccessingSecurityScopedResource() }
+                                
+                                do {
+                                    let importJson = try String(contentsOf: file)
+                                    self.model.encodedData = importJson
+                                    self.model.importFromFile = true
+                                    self.showingSheet.toggle()
+                                } catch {
+                                    print("Fehler beim Lesen der Datei: \(error)")
+                                }
+                            case .failure(let error):
+                                print(error.localizedDescription)
+                            }
+                        }
+                    }
+                    Button("Watch synchronisieren") {
+                        self.model.setEncodedDataFull()
+                        model.appleWatch.syncAppDataToWatch(appData: model.encodedData)
                     }
                 }
                 Button("App Information") {
                     self.showingInfo.toggle()
                 }
+                /*
+                Button("Daten an die Watch senden") {
+                    model.appleWatch.sendDataToWatch(data: "Hallo von iPhone! \(Date())")
+                }
+                */
                 /*
                 Button("Navigate") {
                     self.model.selectedItem = self.model.dataObjects[1]

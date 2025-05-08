@@ -13,16 +13,25 @@ struct SheetView: View {
     
     var body: some View {
         VStack {
-            Text("Export / Import")
-                .padding(5)
+            if model.importFromFile {
+                Text("Import")
+                    .padding(5)
+            } else {
+                Text("Export / Import")
+                    .padding(5)
+            }
+            
             TextEditor(text: $model.encodedData)
                 .padding(5).border(Color.gray.opacity(0.5), width: 1) // Hier wird die hellere graue Farbe hinzugefügt
                 .cornerRadius(10) // Hier werden die Ecken abgerundet
             //  Text("Der Text wurde automatisch in die Zwischenablage kopiert").font(.footnote)
-            ShareLink(item: self.model.encodedData, preview: SharePreview("App Daten teilen")) {
-                Image(systemName: "square.and.arrow.up")
-                Text("Inhalt teilen")
-            }.buttonStyle(.borderedProminent).padding(.top)
+          //  ShareLink(item: self.model.encodedData, preview: SharePreview("App Daten teilen")) {
+            if model.importFromFile == false {
+                ShareLink(item: saveCardsToFile(model.dataObjects)) {
+                    Image(systemName: "square.and.arrow.up")
+                    Text("Inhalt teilen")
+                }.buttonStyle(.borderedProminent).padding(.top)
+            }
             Menu {
                 Button("Import (vorher löschen)") {
                     self.model.importDataObjects()
@@ -50,13 +59,15 @@ struct SheetView: View {
                     dismiss()
                 }
                  */
-                Button("Feld löschen für Import") {
-                    self.model.encodedData = ""
-                    self.model.encodedHiddenData = ""
-                }
-                Button("Text kopieren") {
-                    let pasteboard = UIPasteboard.general
-                    pasteboard.string = self.model.encodedData
+                if model.importFromFile  == false {
+                    Button("Feld löschen für Import") {
+                        self.model.encodedData = ""
+                        self.model.encodedHiddenData = ""
+                    }
+                    Button("Text kopieren") {
+                        let pasteboard = UIPasteboard.general
+                        pasteboard.string = self.model.encodedData
+                    }
                 }
             } label: {
                 Label("Import", systemImage: "ellipsis.circle")
@@ -65,6 +76,26 @@ struct SheetView: View {
                 dismiss()
             }.buttonStyle(.borderedProminent)
         }.padding(5)
+    }
+    
+    func saveCardsToFile(_ cards: [DataObject], filename: String = "cards.json") -> URL {
+        let url = getDocumentsDirectory().appendingPathComponent(filename)
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+
+        do {
+            let data = try encoder.encode(cards)
+            try data.write(to: url)
+            print("✅ Daten gespeichert unter: \(url)")
+        } catch {
+            print("❌ Fehler beim Speichern der Karten: \(error)")
+        }
+        
+        return url
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     }
 }
 

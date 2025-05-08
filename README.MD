@@ -16,7 +16,9 @@ Pro Karte kann jeweils die Kartenfarbe und die Textfarbe gewählt werden. Für d
 
 Die Karten können biometrisch geschützt werden, dass die Barcodes erst angezeigt werden können, nachdem man sich zB per Face ID erfolgreich angemeldet hat.
 
-Die Daten können entweder über das "Speichern" Menü manuell gespeichert werden oder indem die App in den Hintergrund gelegt wird, werden die Daten ebenfalls automatisch gespeichert. Bedeutet allerdings: erfasst man neue Daten und speichert nicht manuell, wechselt in den App Drawer und schießt dann die App direkt App, dann wurden die Änderungen nicht gespeichert da die App noch nicht in den Hintergrundmodus gewechselt war.
+Die Daten können entweder über das "Speichern" Menü manuell gespeichert werden oder indem die App in den Hintergrund gelegt wird, werden die Daten ebenfalls automatisch gespeichert. Bedeutet allerdings: erfasst man neue Daten und speichert nicht manuell, wechselt in den App Drawer und schießt dann die App direkt ab, dann wurden die Änderungen nicht gespeichert, da die App noch nicht in den Hintergrundmodus gewechselt war.
+
+Für Besitzer eine Apple Watch steht außerdem eine watchOS App zur Verfügung. Um die Karten vom iPhone auf die App zu übertragen gibt es in der Kartenliste auf dem iPhone bei den Menüs den Eintrag `Watch synchronisieren`. Die Daten werden nicht automatisch synchronisiert. Erfasst man neue Karten oder ändert Daten, dann müssen die Änderungen vom iPhone auf die Apple Watch übertragen werden. Die Apple Watch zeigt auch nicht automatisch die Karte anhand der Geo Position an, wie das die iPhone App kann.
 
 ## Technischer Hintergrund
 
@@ -40,3 +42,13 @@ Die App kann mit dem vorhandenen Code aus Github direkt 1:1 verwendet werden.
 
 ### Einstellungen
 ![Einstellungen](https://ios.dbweb.info/wp-content/uploads/2024/11/karten4-scaled.jpg)
+
+### watchOS Liste
+![Liste](https://ios.dbweb.info/wp-content/uploads/2025/05/meinekarten_watchos_liste-portrait.png)
+
+### watchOS QR Code
+![QRCode](https://ios.dbweb.info/wp-content/uploads/2025/05/meinekarten_watchos_blur_qr-portrait.png)
+
+### watchOS Barcode
+![Barcode](https://ios.dbweb.info/wp-content/uploads/2025/05/meinekarten_watchos_blur_barcode-portrait.png)
+

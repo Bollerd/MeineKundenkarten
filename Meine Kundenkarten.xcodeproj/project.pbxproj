@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3348C902D1D419100A7FEB5 /* WatchOSCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3348C8F2D1D418B00A7FEB5 /* WatchOSCommunication.swift */; };
+		F3348CB82D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F3348C952D1D43DE00A7FEB5 /* MeineKundenkartenWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F370C9CF2B57C57400EC9A9E /* TipKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F370C9CE2B57C57400EC9A9E /* TipKit.swift */; };
 		F370C9D82B59AE8000EC9A9E /* SwiftHelperExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = F370C9D72B59AE8000EC9A9E /* SwiftHelperExtensions */; };
 		F370C9DE2B5A583700EC9A9E /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = F370C9DD2B5A583700EC9A9E /* ZIPFoundation */; };
@@ -31,7 +33,49 @@
 		F3E383292B56AD4000E5AB5B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E383282B56AD4000E5AB5B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F3348CA52D1D43E000A7FEB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3CF06232B34A2E800559926 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3348C942D1D43DE00A7FEB5;
+			remoteInfo = "MeineKundenkartenWatch Watch App";
+		};
+		F3348CAF2D1D43E000A7FEB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3CF06232B34A2E800559926 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3348C942D1D43DE00A7FEB5;
+			remoteInfo = "MeineKundenkartenWatch Watch App";
+		};
+		F3348CB62D1D43E000A7FEB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3CF06232B34A2E800559926 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3348C942D1D43DE00A7FEB5;
+			remoteInfo = "MeineKundenkartenWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F3348CBC2D1D43E000A7FEB5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F3348CB82D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F3348C8F2D1D418B00A7FEB5 /* WatchOSCommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSCommunication.swift; sourceTree = "<group>"; };
+		F3348C952D1D43DE00A7FEB5 /* MeineKundenkartenWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MeineKundenkartenWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3348CA42D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MeineKundenkartenWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3348CAE2D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MeineKundenkartenWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F370C9CE2B57C57400EC9A9E /* TipKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipKit.swift; sourceTree = "<group>"; };
 		F3912EAC2B7E641D00FD191B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		F3CF062B2B34A2E800559926 /* Meine Kundenkarten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meine Kundenkarten.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,7 +100,34 @@
 		F3E51BFB2CD9322300F8F85D /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F3348C962D1D43DE00A7FEB5 /* MeineKundenkartenWatch Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "MeineKundenkartenWatch Watch App"; sourceTree = "<group>"; };
+		F3348CA72D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "MeineKundenkartenWatch Watch AppTests"; sourceTree = "<group>"; };
+		F3348CB12D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "MeineKundenkartenWatch Watch AppUITests"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		F3348C922D1D43DE00A7FEB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3348CA12D1D43E000A7FEB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3348CAB2D1D43E000A7FEB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3CF06282B34A2E800559926 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,6 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				F3CF062D2B34A2E800559926 /* Meine Kundenkarten */,
+				F3348C962D1D43DE00A7FEB5 /* MeineKundenkartenWatch Watch App */,
+				F3348CA72D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppTests */,
+				F3348CB12D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppUITests */,
 				F3CF062C2B34A2E800559926 /* Products */,
 				F3CF06592B470B3B00559926 /* Meine-Kundenkarten-Info.plist */,
 				F3E51BFB2CD9322300F8F85D /* README.MD */,
@@ -85,6 +159,9 @@
 			isa = PBXGroup;
 			children = (
 				F3CF062B2B34A2E800559926 /* Meine Kundenkarten.app */,
+				F3348C952D1D43DE00A7FEB5 /* MeineKundenkartenWatch Watch App.app */,
+				F3348CA42D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppTests.xctest */,
+				F3348CAE2D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +214,7 @@
 		F3E383252B55A18900E5AB5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F3348C8F2D1D418B00A7FEB5 /* WatchOSCommunication.swift */,
 				F3CF06422B44851800559926 /* AppData.swift */,
 				F3CF06442B44853700559926 /* Model.swift */,
 				F3CF06462B44864100559926 /* Background.swift */,
@@ -150,6 +228,74 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F3348C942D1D43DE00A7FEB5 /* MeineKundenkartenWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3348CB92D1D43E000A7FEB5 /* Build configuration list for PBXNativeTarget "MeineKundenkartenWatch Watch App" */;
+			buildPhases = (
+				F3348C912D1D43DE00A7FEB5 /* Sources */,
+				F3348C922D1D43DE00A7FEB5 /* Frameworks */,
+				F3348C932D1D43DE00A7FEB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F3348C962D1D43DE00A7FEB5 /* MeineKundenkartenWatch Watch App */,
+			);
+			name = "MeineKundenkartenWatch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "MeineKundenkartenWatch Watch App";
+			productReference = F3348C952D1D43DE00A7FEB5 /* MeineKundenkartenWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3348CA32D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3348CBD2D1D43E000A7FEB5 /* Build configuration list for PBXNativeTarget "MeineKundenkartenWatch Watch AppTests" */;
+			buildPhases = (
+				F3348CA02D1D43E000A7FEB5 /* Sources */,
+				F3348CA12D1D43E000A7FEB5 /* Frameworks */,
+				F3348CA22D1D43E000A7FEB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3348CA62D1D43E000A7FEB5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F3348CA72D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppTests */,
+			);
+			name = "MeineKundenkartenWatch Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "MeineKundenkartenWatch Watch AppTests";
+			productReference = F3348CA42D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F3348CAD2D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3348CC02D1D43E000A7FEB5 /* Build configuration list for PBXNativeTarget "MeineKundenkartenWatch Watch AppUITests" */;
+			buildPhases = (
+				F3348CAA2D1D43E000A7FEB5 /* Sources */,
+				F3348CAB2D1D43E000A7FEB5 /* Frameworks */,
+				F3348CAC2D1D43E000A7FEB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3348CB02D1D43E000A7FEB5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F3348CB12D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppUITests */,
+			);
+			name = "MeineKundenkartenWatch Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "MeineKundenkartenWatch Watch AppUITests";
+			productReference = F3348CAE2D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		F3CF062A2B34A2E800559926 /* Meine Kundenkarten */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3CF06392B34A2E900559926 /* Build configuration list for PBXNativeTarget "Meine Kundenkarten" */;
@@ -157,10 +303,12 @@
 				F3CF06272B34A2E800559926 /* Sources */,
 				F3CF06282B34A2E800559926 /* Frameworks */,
 				F3CF06292B34A2E800559926 /* Resources */,
+				F3348CBC2D1D43E000A7FEB5 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F3348CB72D1D43E000A7FEB5 /* PBXTargetDependency */,
 			);
 			name = "Meine Kundenkarten";
 			packageProductDependencies = (
@@ -180,9 +328,20 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1510;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
+					F3348C942D1D43DE00A7FEB5 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					F3348CA32D1D43E000A7FEB5 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = F3348C942D1D43DE00A7FEB5;
+					};
+					F3348CAD2D1D43E000A7FEB5 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = F3348C942D1D43DE00A7FEB5;
+					};
 					F3CF062A2B34A2E800559926 = {
 						CreatedOnToolsVersion = 15.1;
 					};
@@ -208,11 +367,35 @@
 			projectRoot = "";
 			targets = (
 				F3CF062A2B34A2E800559926 /* Meine Kundenkarten */,
+				F3348C942D1D43DE00A7FEB5 /* MeineKundenkartenWatch Watch App */,
+				F3348CA32D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppTests */,
+				F3348CAD2D1D43E000A7FEB5 /* MeineKundenkartenWatch Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F3348C932D1D43DE00A7FEB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3348CA22D1D43E000A7FEB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3348CAC2D1D43E000A7FEB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3CF06292B34A2E800559926 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +410,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F3348C912D1D43DE00A7FEB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3348CA02D1D43E000A7FEB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3348CAA2D1D43E000A7FEB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F3CF06272B34A2E800559926 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +440,7 @@
 				F3CF062F2B34A2E800559926 /* Meine_KundenkartenApp.swift in Sources */,
 				F3CF064B2B44871E00559926 /* LaunchScreenView.swift in Sources */,
 				F3CF06492B4486F600559926 /* LaunchScreenStateManager.swift in Sources */,
+				F3348C902D1D419100A7FEB5 /* WatchOSCommunication.swift in Sources */,
 				F3CF06432B44851800559926 /* AppData.swift in Sources */,
 				F3CF06452B44853700559926 /* Model.swift in Sources */,
 				F3912EAD2B7E641D00FD191B /* SearchBar.swift in Sources */,
@@ -250,7 +455,167 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F3348CA62D1D43E000A7FEB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3348C942D1D43DE00A7FEB5 /* MeineKundenkartenWatch Watch App */;
+			targetProxy = F3348CA52D1D43E000A7FEB5 /* PBXContainerItemProxy */;
+		};
+		F3348CB02D1D43E000A7FEB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3348C942D1D43DE00A7FEB5 /* MeineKundenkartenWatch Watch App */;
+			targetProxy = F3348CAF2D1D43E000A7FEB5 /* PBXContainerItemProxy */;
+		};
+		F3348CB72D1D43E000A7FEB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3348C942D1D43DE00A7FEB5 /* MeineKundenkartenWatch Watch App */;
+			targetProxy = F3348CB62D1D43E000A7FEB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		F3348CBA2D1D43E000A7FEB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MeineKundenkartenWatch Watch App/MeineKundenkartenWatch Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 32;
+				DEVELOPMENT_ASSET_PATHS = "\"MeineKundenkartenWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = Z6946K9NFZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MeineKundenkartenWatch;
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = MeineKundenkartenWatch_Watch_App.ComplicationController;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "de.bollernet.Meine-Kundenkarten";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.bollernet.Meine-Kundenkarten.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		F3348CBB2D1D43E000A7FEB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MeineKundenkartenWatch Watch App/MeineKundenkartenWatch Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 32;
+				DEVELOPMENT_ASSET_PATHS = "\"MeineKundenkartenWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = Z6946K9NFZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MeineKundenkartenWatch;
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = MeineKundenkartenWatch_Watch_App.ComplicationController;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "de.bollernet.Meine-Kundenkarten";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.bollernet.Meine-Kundenkarten.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		F3348CBE2D1D43E000A7FEB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z6946K9NFZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.bollernet.MeineKundenkartenWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeineKundenkartenWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MeineKundenkartenWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		F3348CBF2D1D43E000A7FEB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z6946K9NFZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.bollernet.MeineKundenkartenWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeineKundenkartenWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MeineKundenkartenWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		F3348CC12D1D43E000A7FEB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z6946K9NFZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.bollernet.MeineKundenkartenWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "MeineKundenkartenWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		F3348CC22D1D43E000A7FEB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z6946K9NFZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.bollernet.MeineKundenkartenWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "MeineKundenkartenWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 		F3CF06372B34A2E900559926 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -377,7 +742,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Meine Kundenkarten/Meine Kundenkarten.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_ASSET_PATHS = "\"Meine Kundenkarten/Preview Content\"";
 				DEVELOPMENT_TEAM = Z6946K9NFZ;
 				ENABLE_PREVIEWS = YES;
@@ -385,6 +750,7 @@
 				INFOPLIST_FILE = "Meine-Kundenkarten-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Meine Kundenkarten";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Für den Import von Codes aus Bildern";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Benötigt um deine Kundenkarte zu scannen und digital in der App zu speichern";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Benötigt um den Zugriff auf deine Kundenkarten biometrisch zu entsperren";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Benötigt um für eine Kundenkarte die Position zu speichern, wo du sie verwenden möchtest";
@@ -398,7 +764,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.bollernet.Meine-Kundenkarten";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -417,7 +783,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Meine Kundenkarten/Meine Kundenkarten.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 32;
 				DEVELOPMENT_ASSET_PATHS = "\"Meine Kundenkarten/Preview Content\"";
 				DEVELOPMENT_TEAM = Z6946K9NFZ;
 				ENABLE_PREVIEWS = YES;
@@ -425,6 +791,7 @@
 				INFOPLIST_FILE = "Meine-Kundenkarten-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Meine Kundenkarten";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Für den Import von Codes aus Bildern";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Benötigt um deine Kundenkarte zu scannen und digital in der App zu speichern";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Benötigt um den Zugriff auf deine Kundenkarten biometrisch zu entsperren";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Benötigt um für eine Kundenkarte die Position zu speichern, wo du sie verwenden möchtest";
@@ -438,7 +805,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.bollernet.Meine-Kundenkarten";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -453,6 +820,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F3348CB92D1D43E000A7FEB5 /* Build configuration list for PBXNativeTarget "MeineKundenkartenWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3348CBA2D1D43E000A7FEB5 /* Debug */,
+				F3348CBB2D1D43E000A7FEB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3348CBD2D1D43E000A7FEB5 /* Build configuration list for PBXNativeTarget "MeineKundenkartenWatch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3348CBE2D1D43E000A7FEB5 /* Debug */,
+				F3348CBF2D1D43E000A7FEB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3348CC02D1D43E000A7FEB5 /* Build configuration list for PBXNativeTarget "MeineKundenkartenWatch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3348CC12D1D43E000A7FEB5 /* Debug */,
+				F3348CC22D1D43E000A7FEB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F3CF06262B34A2E800559926 /* Build configuration list for PBXProject "Meine Kundenkarten" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -13,11 +13,12 @@ import SwiftHelperUIKitExtensions
 let DEBUG = false
 let DEBUG_PLACEMARK = false
 var ENABLE_LAUNCH_SCREEN = false
-let VERSION = "1.1"
-let BUILD = "17"
+let VERSION = "1.1.2"
+let BUILD = "32"
 let ICLOUD_CONTAINER_NAME = "iCloud.de.bollernet.meinekundenkarten"
 let ICLOUD_FILE_NAME = "kundenkarten.json"
 let COMPANY_COLOR_NONE = "Keine Auswahl"
+let WATCH_IMAGE_SIZE: CGFloat = 140.0
 
 class ICloudFileHandler: iCloudFileHelperModel {
     var model: Model?
@@ -70,6 +71,11 @@ class ICloudFileHandler: iCloudFileHelperModel {
     }
 }
 
+class SharedModel: ObservableObject {
+    @Published var messageFromPhone = "Initialized"
+    //let model = Model()
+}
+
 class Model: ObservableObject {
     @Published var dataObjects = [DataObject]()
     @Published var encodedData = ""
@@ -85,8 +91,12 @@ class Model: ObservableObject {
     @Published var updateUi = false
     @Published var isUnlocked = false
     @Published var unlockError = ""
+    @Published var messageFromPhone = ""
+    @Published var importFromFile = false
     @Published var fileContent = ICloudFileHandler(fileName: ICLOUD_FILE_NAME)
     @Published var companyColors: [CompanyColor] = [CompanyColor(background: Color.blue, fontcolor: Color.white, company: COMPANY_COLOR_NONE)]
+    @Published var watchModel = SharedModel()
+    
     private var companyColorsUnsorted: [CompanyColor] = [
         CompanyColor(background: Color(uiColor: UIColor.hexStringToUIColor(hex: "cc2d1b")), fontcolor: Color.white, company: "Mediamarkt"),
         CompanyColor(background: Color.black, fontcolor: Color.white, company: "Saturn"),
@@ -135,8 +145,12 @@ class Model: ObservableObject {
     var dataChanged = false
     private var locationFetcher = LocationFetcher()
     private var locationRetries = 0
+    var appleWatch: iPhoneConnectivityManager
     
     init() {
+        let watchInitModel = SharedModel()
+        self.appleWatch = iPhoneConnectivityManager(model: watchInitModel)
+        self.watchModel = watchInitModel
         self.companyColors = self.companyColorsUnsorted.sorted { $0.company < $1.company }
         self.companyColors.insert(contentsOf: [CompanyColor(background: Color.blue, fontcolor: Color.white, company: COMPANY_COLOR_NONE)], at: 0)
         self.readiCloudFileData()
@@ -145,6 +159,12 @@ class Model: ObservableObject {
             self.authenticateWithFaceID()
         }
         self.selectItemForAutoCheckin()
+        self.setWatchCommunication()
+    }
+    
+    func setWatchCommunication() {
+        self.appleWatch = iPhoneConnectivityManager(model: self.watchModel)
+        self.appleWatch.phoneModel = self
     }
     
     func selectItemForAutoCheckin() {
@@ -307,6 +327,44 @@ class Model: ObservableObject {
                 }
             }
             
+            
+            self.encodedData = String(decoding: try JSONEncoder().encode(localDataObjects), as: UTF8.self)
+        } catch {
+            self.encodedData = "Encoding error"
+        }
+    }
+    
+    func setEncodedDataFull(singleItem: DataObject = DataObject(description: "", barcodeType: "", barcodeValue: "", cardColor: .black, fontColor: .black)) {
+        do {
+            // we create here new local objects to avoid saving the very long base64 image string and to avoid to save all the placemark info data
+            var localDataObjects = [DataObject]()
+            
+            if singleItem.description != "" && singleItem.barcodeType != "" && singleItem.barcodeValue != "" {
+                var cleanedItem = DataObject(description: singleItem.description, info: singleItem.info ?? "", barcodeType: singleItem.barcodeType, barcodeValue: singleItem.barcodeValue, cardColor: singleItem.cardColor.toSwiftUIColor(), fontColor: singleItem.fontColor.toSwiftUIColor())
+                
+                for location in singleItem.usedAtLocations {
+                    var cleanedLocation = ShowedAtLocation(latitude: location.latitude, longitude: location.longitude, name: "")
+                    
+                    cleanedItem.usedAtLocations.append(cleanedLocation)
+                }
+                
+                localDataObjects.append(singleItem)
+            } else {
+                for item in self.dataObjects {
+                    var cleanedItem = DataObject(description: item.description, info: item.info ?? "", barcodeType: item.barcodeType, barcodeValue: item.barcodeValue, cardColor: item.cardColor.toSwiftUIColor(), fontColor: item.fontColor.toSwiftUIColor())
+                    
+                    
+                    cleanedItem.setBase64String(imageString: item.getBase64String())
+                    
+                    for location in item.usedAtLocations {
+                        var cleanedLocation = ShowedAtLocation(latitude: location.latitude, longitude: location.longitude, name: "")
+                        
+                        cleanedItem.usedAtLocations.append(cleanedLocation)
+                    }
+                    
+                    localDataObjects.append(cleanedItem)
+                }
+            }
             
             self.encodedData = String(decoding: try JSONEncoder().encode(localDataObjects), as: UTF8.self)
         } catch {

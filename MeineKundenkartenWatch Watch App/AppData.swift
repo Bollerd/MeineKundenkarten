@@ -2,16 +2,14 @@
 //  AppData.swift
 //  Meine Kundenkarten
 //
-//  Created by Dirk Boller on 02.01.24.
+//  Created by Dirk Boller on 14.01.2025.
 //
 
 import SwiftUI
-import AVFoundation
-import CoreImage
-import CoreImage.CIFilterBuiltins
-import CoreLocation
-import WebKit
-let context = CIContext()
+
+let DEBUG = false
+let DEBUG_PLACEMARK = false
+let SIMULATE_DATA = true
 
 struct CompanyColor: Identifiable, Hashable {
     let id = UUID()
@@ -25,23 +23,6 @@ struct CompanyColor: Identifiable, Hashable {
 
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
-    }
-}
-
-class WebLoader {
-    let webView: WKWebView
-    let model: Model
-    
-    init(model: Model) {
-        let webConfiguration = WKWebViewConfiguration()
-        self.model = model
-        self.webView = WKWebView(frame: .zero, configuration: webConfiguration)
-        //    self.webView.navigationDelegate = self
-    }
-    
-    func loadURL(url: URL) {
-        let request = URLRequest(url: url)
-        self.webView.load(request)
     }
 }
 
@@ -176,25 +157,7 @@ class DataObject: Codable, Identifiable, Hashable, ObservableObject {
     var barcodeType: String
     var barcodeValue: String
     var usedAtLocations: [ShowedAtLocation]
-    var ciBarcodeType: String {
-        get {
-            switch self.barcodeType {
-            case AVMetadataObject.ObjectType.qr.rawValue:
-                return "CIQRCodeGenerator"
-            case AVMetadataObject.ObjectType.pdf417.rawValue:
-                return "CIPDF417BarcodeGenerator"
-            case AVMetadataObject.ObjectType.code128.rawValue:
-                return "CICode128BarcodeGenerator"
-                //  case AVMetadataObject.ObjectType.ean13.rawValue:
-                //      return "CIAztecCodeGenerator"
-            case AVMetadataObject.ObjectType.aztec.rawValue:
-                return "CIAztecCodeGenerator"
-            default:
-                return ""
-            }
-        }
-    }
-    private var base64String: String? = ""
+    var base64String: String = ""
     
     static func == (lhs: DataObject, rhs: DataObject) -> Bool {
         return lhs.id == rhs.id
@@ -204,7 +167,7 @@ class DataObject: Codable, Identifiable, Hashable, ObservableObject {
         hasher.combine(id)
     }
     
-    init(description: String, info: String = "", barcodeType: String, barcodeValue: String, cardColor: Color, fontColor: Color) {
+    init(description: String, info: String = "", barcodeType: String, barcodeValue: String, cardColor: Color, fontColor: Color, base64String: String) {
         self.description = description
         self.barcodeValue = barcodeValue
         self.barcodeType = barcodeType
@@ -216,7 +179,7 @@ class DataObject: Codable, Identifiable, Hashable, ObservableObject {
     }
     
     static func getNewObject() -> DataObject {
-        return DataObject(description: "",info: "", barcodeType:"", barcodeValue: "", cardColor: Color.red, fontColor: Color.black)
+        return DataObject(description: "",info: "", barcodeType:"", barcodeValue: "", cardColor: Color.red, fontColor: Color.black, base64String: "")
     }
     
     func checkForMarkedPosition(location: ShowedAtLocation) -> Bool {
@@ -227,25 +190,6 @@ class DataObject: Codable, Identifiable, Hashable, ObservableObject {
         let abwLat = 0.000899
         print("this is checkformarkedposition for \(location.longitude) / \(location.latitude) of card \(self.description)")
         for usedLocation in self.usedAtLocations {
-            if self.description == "REWE" {
-                print(usedLocation.longitude)
-                print(usedLocation.latitude)
-                if ( location.latitude - abwLat ) <= usedLocation.latitude  {
-                    print("returning true 1")
-                    
-                }
-                if  ( location.latitude + abwLat ) >= usedLocation.latitude  {
-                    print("returning true 2")
-                }
-                if  ( location.longitude - abwLong) <= usedLocation.longitude  {
-                    print("returning true 3")
-                    
-                }
-                if  ( location.longitude + abwLong ) >= usedLocation.longitude {
-                    print("returning true 4")
-                    
-                }
-            }
             if ( location.latitude - abwLat ) <= usedLocation.latitude && ( location.latitude + abwLat ) >= usedLocation.latitude && ( location.longitude - abwLong) <= usedLocation.longitude && ( location.longitude + abwLong ) >= usedLocation.longitude {
                 print("returning true")
                 return true
@@ -260,59 +204,6 @@ class DataObject: Codable, Identifiable, Hashable, ObservableObject {
     
     func setBase64String(imageString: String) {
         self.base64String = imageString
-    }
-    
-    func getBase64String() -> String {
-        if self.base64String != nil && self.base64String != "" {
-            return self.base64String ?? ""
-        } else {
-            if let data = self.generateBarcodeForWatch() {
-                return data.base64EncodedString()
-            } else {
-                return ""
-            }
-        }
-    }
-    
-    // Funktion zum Skalieren eines Bildes auf eine maximale Breite
-    func scaleImageToWidth(image: UIImage, maxWidth: CGFloat) -> UIImage {
-        let size = image.size
-        
-        // Skalieren nur, wenn das Bild breiter als maxWidth ist
-        if size.width > maxWidth {
-            let scale = maxWidth / size.width
-            let newSize = CGSize(width: maxWidth, height: size.height * scale)
-            
-            // Neues Bild rendern
-            UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
-            image.draw(in: CGRect(origin: .zero, size: newSize))
-            let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            
-            return scaledImage ?? image
-        }
-        
-        // Bild unverändert zurückgeben, wenn es kleiner als maxWidth ist
-        return image
-    }
-    
-    func getJSBarcodeType() -> String {
-        var returnType = ""
-        switch self.barcodeType {
-        case "org.gs1.EAN-8":
-            returnType = "EAN8"
-        case "org.iso.Code39":
-            returnType = "CODE39"
-        case "org.gs1.EAN-13":
-            returnType = "EAN13"
-        case "org.gs1.ITF14":
-            returnType = "itf14"
-        case "org.ansi.Interleaved2of5":
-            returnType = "itf"
-        default:
-            returnType = ""
-        }
-        return returnType
     }
     
     func getBarcodeWidth() -> CGFloat {
@@ -335,38 +226,6 @@ class DataObject: Codable, Identifiable, Hashable, ObservableObject {
             returnHeigth = 200.0
         }
         return returnHeigth
-    }
-    
-    func generateBarcode() -> Data? {
-        let data = self.barcodeValue.data(using: String.Encoding.ascii)
-        let codeType = self.ciBarcodeType
-        if let barcodeFilter = CIFilter(name: codeType) {
-            barcodeFilter.setValue(data, forKey: "inputMessage")
-            let transform = CGAffineTransform(scaleX: 20, y: 20)
-            
-            if let output = barcodeFilter.outputImage?.transformed(by: transform) {
-                return UIImage(ciImage: output).pngData()!
-            }
-        }
-        return UIImage(systemName: "xmark.circle")!.pngData() ?? UIImage().pngData()
-    }
-    
-    func generateBarcodeForWatch() -> Data? {
-        let data = self.barcodeValue.data(using: String.Encoding.ascii)
-        let codeType = self.ciBarcodeType
-        if let barcodeFilter = CIFilter(name: codeType) {
-            barcodeFilter.setValue(data, forKey: "inputMessage")
-            let transform = CGAffineTransform(scaleX: 20, y: 20)
-            
-            if let output = barcodeFilter.outputImage?.transformed(by: transform) {
-                let fullImage = UIImage(ciImage: output)
-                let sizedImage = self.scaleImageToWidth(image: fullImage, maxWidth: WATCH_IMAGE_SIZE)
-                return sizedImage.pngData()!
-            }
-        }
-        let fullImage = UIImage(systemName: "xmark.circle") ?? UIImage()
-        let sizedImage = self.scaleImageToWidth(image: fullImage, maxWidth: WATCH_IMAGE_SIZE)
-        return sizedImage.pngData()
     }
     
     func generateJSBarcode() -> AnyView {
@@ -393,3 +252,5 @@ class DataObject: Codable, Identifiable, Hashable, ObservableObject {
         }
     }
 }
+
+typealias DataObjects = [DataObject]
